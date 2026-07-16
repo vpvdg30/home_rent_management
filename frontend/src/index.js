@@ -13,6 +13,20 @@ const queryClient = new QueryClient({
   },
 });
 
+// Suppress benign ResizeObserver loop warning that appears as CRA red overlay in dev preview
+if (typeof window !== "undefined") {
+  const RO_MSG = "ResizeObserver loop";
+  window.addEventListener("error", (e) => {
+    if (e.message && e.message.includes(RO_MSG)) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+    }
+  });
+  window.addEventListener("unhandledrejection", (e) => {
+    if (e.reason?.message?.includes?.(RO_MSG)) e.preventDefault();
+  });
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
