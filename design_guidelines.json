@@ -1,0 +1,152 @@
+{
+  "theme": "light",
+  "typography": {
+    "strategy": "Soft Utility",
+    "headings": {
+      "family": "Outfit",
+      "weights": ["400", "500", "600"],
+      "classes": "font-sans tracking-tight text-slate-900"
+    },
+    "body": {
+      "family": "Inter",
+      "weights": ["400", "500"],
+      "classes": "font-sans text-slate-600 leading-relaxed"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight",
+      "h3": "text-xl sm:text-2xl font-medium tracking-tight",
+      "h4": "text-lg sm:text-xl font-medium tracking-tight",
+      "body": "text-base sm:text-sm",
+      "labels": "text-xs font-semibold tracking-[0.2em] uppercase text-slate-500"
+    },
+    "forbidden_fonts": ["Space Grotesk", "Inter (for headings)"]
+  },
+  "colors": {
+    "archetype": "Organic & Earthy mixed with High-Contrast",
+    "background": "#F8FAFC", 
+    "surface": "#FFFFFF",
+    "primary": "#4338CA", 
+    "primary_hover": "#3730A3",
+    "text_main": "#0F172A",
+    "text_muted": "#64748B",
+    "border": "#E2E8F0",
+    "status": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "danger": "#EF4444",
+      "info": "#3B82F6"
+    },
+    "forbidden_colors": ["#1B93A4", "#7351B7"],
+    "rules": [
+      "No full-screen gradients. Use solid colors and subtle textures.",
+      "Never use pure black or pure gray. Always tint grays with blue/slate.",
+      "Ensure APCA/WCAG contrast minimums. Interactive elements minimum 3:1 against background."
+    ]
+  },
+  "layout_and_grids": {
+    "strategy": "Mode B: High Density Grid",
+    "base_grid": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+    "gaps": "gap-4 md:gap-6",
+    "padding": "p-4 sm:p-6 md:p-8",
+    "widgets": {
+      "summary_card": "col-span-1",
+      "primary_chart": "col-span-2 row-span-2 lg:col-span-3",
+      "feed_list": "col-span-1 row-span-2"
+    },
+    "surfaces": {
+      "dashboard_cards": "bg-white border border-slate-200 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300",
+      "header": "bg-white/80 backdrop-blur-xl border-b border-slate-200 sticky top-0 z-50",
+      "sidebar": "bg-slate-900 text-slate-300"
+    }
+  },
+  "components": {
+    "libraries": [
+      "shadcn/ui",
+      "lucide-react",
+      "@phosphor-icons/react",
+      "recharts",
+      "sonner"
+    ],
+    "guidelines": {
+      "buttons": "Pill-shaped or rounded-md with distinct hover states. Primary button must use #4338CA. Always include active and focus states.",
+      "tables": "Dense, crisp borders (border-b on rows), left-aligned data, right-aligned numbers. Highlight row on hover.",
+      "forms": "Use Shadcn Form, Input, Select. Labels must be uppercase and tracked out (labels hierarchy). Inputs have 1px border, focus ring.",
+      "dialogs": "Solid background, no heavy glassmorphism for forms to maintain readability. Max-width md or lg.",
+      "charts": "Use Recharts via Shadcn. Keep tooltips clean. Use colors from status or primary palette."
+    }
+  },
+  "motion_and_interactions": {
+    "hover": "Subtle y-axis lift (-translate-y-0.5) and shadow increase for clickable cards.",
+    "transitions": "transition-all duration-200 ease-in-out. DO NOT use 'transition: all' globally in CSS. Apply explicitly to interactive elements.",
+    "page_load": "Staggered fade-in and slide-up (translate-y-4 to 0) for dashboard widgets.",
+    "accessibility": "Respect prefers-reduced-motion."
+  },
+  "media_and_images": {
+    "rules": [
+      "Never use placeholder image services.",
+      "Images should have max-h-[80vh] constraint on mobile."
+    ],
+    "image_urls": [
+      {
+        "category": "buildings",
+        "description": "Modern apartment building exterior (low angle blue sky)",
+        "url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhcGFydG1lbnQlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDB8fHx8MTc4NDE2NjU1MXww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "buildings",
+        "description": "White concrete building daytime",
+        "url": "https://images.unsplash.com/photo-1624204386084-dd8c05e32226?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBhcGFydG1lbnQlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDB8fHx8MTc4NDE2NjU1MXww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "buildings",
+        "description": "Contemporary apartment buildings in Berlin",
+        "url": "https://images.pexels.com/photos/18153132/pexels-photo-18153132.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      },
+      {
+        "category": "avatars",
+        "description": "Smiling woman portrait",
+        "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NDA5OTkxOXww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "avatars",
+        "description": "Man wearing Henley top",
+        "url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NDA5OTkxOXww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "avatars",
+        "description": "Man wearing white V-neck shirt",
+        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NDA5OTkxOXww&ixlib=rb-4.1.0&q=85"
+      }
+    ]
+  },
+  "testing": {
+    "attributes": "All interactive and key informational elements MUST include a 'data-testid' attribute in kebab-case."
+  },
+  "universal_guidelines_for_main_agent": [
+    "You tend to converge toward generic, 'on distribution' outputs. Make creative, distinctive frontends that surprise and delight.",
+    "Do not use dark colors as gradients. Dark colors look good when used independently.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) strictly for headers or floating elements, NOT for data-heavy cards.",
+    "You MUST NOT apply universal transition. Eg: transition: all. Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, custom cursors, selection states, and loading animations separate good from extraordinary.",
+    "Main agent relies on provided image URLs. NEVER use placeholder text or dummy image services."
+  ],
+  "instructions_to_main_agent": {
+    "setup": "Install @phosphor-icons/react, recharts, and sonner. Use standard tailwind setup.",
+    "file_structure": "Focus on .js files (not .tsx) if the environment dictates Javascript. Ensure Shadcn components are created using correct extensions.",
+    "critical_reminders": [
+      "Never use a completely transparent background on dropdowns, modals, or sticky headers.",
+      "Base64 image upload functionality must be implemented correctly with proper Shadcn form inputs.",
+      "Currency is INR. Format currency properly.",
+      "Include Dashboard with charts showing monthly income.",
+      "Build a clear property/building list and tenant detail views."
+    ]
+  }
+}
